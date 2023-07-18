@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+}
+@font-face {
+  font-family: raleway_f;
+  src: url(../fonts/raleway-black.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: raleway_f;
+  src: url(../fonts/raleway-regular.woff2);
+}
+body {
+  background-color: #010101;
+  color: #ffffff;
+  font-family: raleway_f, sans-serif;
+  line-height: 1.55;
+}
+.header {
+  position: relative;
+}
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+ 
+
+.layers__base {
+  transform: translate3d(0 , calc(var(--scrollTop) / 1.6)   , 0);
+
+}
+.layers__middle {
+  transform: translate3d(0 ,  calc(var(--scrollTop) / 2.5) , 0);
+
+}
+.main-vertical {
+   min-height: 100vh;
+}
