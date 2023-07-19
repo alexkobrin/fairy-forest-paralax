@@ -5,6 +5,8 @@
 }
 :root {
   --index: calc(1vw + 1vh);
+  --text: #e7e7e0;
+  
 }
 @font-face {
   font-family: raleway_f;
@@ -17,12 +19,23 @@
 }
 body {
   background-color: #010101;
-  color: #ffffff;
   font-family: raleway_f, sans-serif;
   line-height: 1.55;
 }
 .header {
   position: relative;
+}
+.header::before {
+  position: absolute;
+  content: '';
+  bottom: calc(var(--index) * -4.5);
+  z-index: 100;
+  width: 100%;
+  height: calc(var(--index) * 10);
+  background-image: url(/img/ground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .layers {
   height: 100vh;
@@ -49,7 +62,6 @@ body {
 }
 .layers__middle {
   transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-
 }
 .layers__front {
   transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
@@ -57,12 +69,12 @@ body {
 
 .layers__header {
   z-index: 1;
-  transform: translate3d(0, calc(var(--scrollTop) /2), 0);
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
   will-change: tranform;
   text-transform: uppercase;
   font-weight: 900;
-  color: #e7e6d3;
-
+  color: var(--text);
+  text-shadow: 0 0 15px #9e7d35;
 }
 .layers__title {
   font-size: calc(var(--index) * 2.5);
@@ -71,8 +83,40 @@ body {
 .layers__caption {
   font-size: calc(var(--index) / 1.175);
   letter-spacing: calc(var(--index) / 3.5);
-  margin-top: calc(var(--index) *  -.75);
+  margin-top: calc(var(--index) * -0.75);
 }
 .main-vertical {
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  --main-article-transform: translate3d(0 ,  calc(var(--scrollTop) / -7.5 ) , 0);
+}
+
+.main-verticle__header {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 1.8);
+  letter-spacing: calc(var(--index) / 7.5);
+  transform: var(--main-article-transform);
+  will-change: transform;
+}
+.main-verticle__paragraph {
+  max-width: calc(var(--index) * 28);
+  font-size: calc(var(--index) * 0.9);
+  margin-top: calc(var(--index) / 1.25);
+  transform: var(--main-article-transform);
+  will-change: transform;
+}
+.copy {
+  position: absolute;
+  bottom: calc(var(--index) * 2.5);
+  opacity: 0.45;
+  font-size: calc(var(--index) * 0.75);
+  letter-spacing: calc(var(--index) / 37.5);
 }
