@@ -6,25 +6,32 @@
     <title>Fairy Forest</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/app.js" deffer></script>
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div class="layers">
-        <div class="layers__header">
-          <div class="layers__caption">Welcome to Parallax</div>
-          <div class="layers__title">Fairy Forest</div>
+  <div class="wrapper">
+    <div class="container">
+      <header class="header">
+        <div class="layers">
+          <div class="layers__header">
+            <div class="layers__caption">Welcome to Parallax</div>
+            <div class="layers__title">Fairy Forest</div>
+          </div>
+          <div class="layer layers__base" style="background-image: url(img/layer-base.png)"></div>
+          <div class="layer layers__middle" style="background-image: url(img/layer-middle.png)"></div>
+          <div class="layer layers__front" style="background-image: url(img/layer-front.png)"></div>
         </div>
-        <div class="layer layers__base" style="background-image: url(img/layer-base.png)"></div>
-        <div class="layer layers__middle" style="background-image: url(img/layer-middle.png)"></div>
-        <div class="layer layers__front" style="background-image: url(img/layer-front.png)"></div>
-      </div>
-    </header>
-    <article class="main-vertical" style="background-image: url(img/dungeon.jpg)">
-      <div class="main-vertical__content">
-        <h2 class="main-verticle__header">To be continued</h2>
-        <p class="main-verticle__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum neque placeat eos officia fugiat quo sint ullam ab cum non odit odio ipsum pariatur ut reiciendis veniam quisquam, eaque corporis voluptatum ducimus. </p>
-      </div>
-      <div class="copy">© Alex </div>
-    </article>
+      </header>
+      <article class="main-vertical" style="background-image: url(img/dungeon.jpg)">
+        <div class="main-vertical__content">
+          <h2 class="main-verticle__header">To be continued</h2>
+          <p class="main-verticle__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum neque placeat eos officia fugiat quo sint ullam ab cum non odit odio ipsum pariatur ut reiciendis veniam quisquam, eaque corporis voluptatum ducimus. </p>
+        </div>
+        <div class="copy">© Alex </div>
+      </article>
+    </div>
+  </div>
   </body>
 </html>
